@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <h1>Tic-Tac-Toe Game</h1>
+
+    <div id="app">
+        <div class="container">
+            <div class="box"><button :class="{winnerblock: position!=null && positions.includes(0)}" :disabled="disabled()" v-on:click="clickBox(0)">{{boxes[0]}}</button></div>
+            <div class="box"><button :class="{winnerblock: position!=null && positions.includes(1)}" :disabled="disabled()" v-on:click="clickBox(1)">{{boxes[1]}}</button></div>
+            <div class="box"><button :class="{winnerblock: position!=null && positions.includes(2)}" :disabled="disabled()" v-on:click="clickBox(2)">{{boxes[2]}}</button></div> 
+            <div class="box"><button :class="{winnerblock: position!=null && positions.includes(3)}" :disabled="disabled()" v-on:click="clickBox(3)">{{boxes[3]}}</button></div>
+            <div class="box"><button :class="{winnerblock: position!=null && positions.includes(4)}" :disabled="disabled()" v-on:click="clickBox(4)">{{boxes[4]}}</button></div>
+            <div class="box"><button :class="{winnerblock: position!=null && positions.includes(5)}" :disabled="disabled()" v-on:click="clickBox(5)">{{boxes[5]}}</button></div>
+            <div class="box"><button :class="{winnerblock: position!=null && positions.includes(6)}" :disabled="disabled()" v-on:click="clickBox(6)">{{boxes[6]}}</button></div>
+            <div class="box"><button :class="{winnerblock: position!=null && positions.includes(7)}" :disabled="disabled()" v-on:click="clickBox(7)">{{boxes[7]}}</button></div>
+            <div class="box"><button :class="{winnerblock: position!=null && positions.includes(8)}" :disabled="disabled()" v-on:click="clickBox(8)">{{boxes[8]}}</button></div>
+        </div>
+        
+        <div class="player">
+            <h2 v-if ="winner == null">"{{player}}" Turn</h2>
+            <h2 v-else-if="winner == 'Draw'">Draw 😅</h2>
+            <h2 v-else>🎉{{winner}} is the winner 🎉</h2>
+        </div>
+        
+        <div>{{positions}}</div>
+
+        <div class="restart" v-on:click="reset"><button>Restart</button></div>
+    </div>
+    
+    <!-- Import app -->
+    <script src="./app.js"></script>  
+
+    <!-- Mount app -->
+    <script>
+        const mounted = app.mount(`#app`)
+    </script> 
+
+</body>
+</html>

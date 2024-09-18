@@ -1,0 +1,63 @@
+h1{
+    text-align: center;
+    text-decoration: underline;
+    color: rgb(238, 113, 238);
+    font-size: 2.5rem;
+    
+}
+h2{
+    text-align: center;
+}
+
+.container{
+    margin: auto;
+    height: 350px;
+    width: 350px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0.5rem;
+    
+}
+
+.box{
+    border: 4px solid;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.box button{
+    border: none;
+    border-radius: 1rem;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+button:hover{
+    background-color: rgb(227, 227, 227);
+}
+
+.restart{
+    text-align: center;
+
+}
+.restart button{
+    padding: auto;
+    font-weight: bold;
+    font-size: 1.5rem;
+    background-color: plum;
+    height: 3rem;
+    width:  8rem;
+    border-radius: 0.5rem;
+
+}
+
+.winnerblock{
+    background-color: rgb(39, 37, 37);
+}
